@@ -1,0 +1,21 @@
+body {
+  background-color: #e6f7ff;
+  font-family: "Times New Roman", serif;
+  color: #003366;
+}
+header {
+  background-color: #005580;
+  color: white;
+  padding: 15px 20px;
+}
+nav {
+  background-color: #ccf2ff;
+}
+nav button.active {
+  background-color: #005580;
+  color: white;
+}
+aside {
+  background-color: #99ccff;
+  color: black;
+}

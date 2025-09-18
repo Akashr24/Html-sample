@@ -1,0 +1,21 @@
+body {
+  background-color: #fff0f5;
+  font-family: "Courier New", Courier, monospace;
+  color: #4b0082;
+}
+header {
+  background-color: #8b0000;
+  color: white;
+  padding: 15px 20px;
+}
+nav {
+  background-color: #ffddee;
+}
+nav button.active {
+  background-color: #8b0000;
+  color: white;
+}
+aside {
+  background-color: #dda0dd;
+  color: black;
+}

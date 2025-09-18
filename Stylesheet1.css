@@ -1,0 +1,21 @@
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+header {
+  background-color: #009966;
+  color: white;
+  padding: 15px 20px;
+}
+nav {
+  background-color: #f3f3f3;
+}
+nav button.active {
+  background-color: #009966;
+  color: white;
+}
+aside {
+  background-color: #3399ff;
+  color: white;
+}

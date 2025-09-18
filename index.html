@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Homepage</title>
+
+<!-- Default stylesheet -->
+<link id="pagestyle" rel="stylesheet" href="stylesheet1.css" />
+
+<style>
+  /* Styles for layout and buttons (always applied) */
+  body, html {
+    margin: 0; padding: 0;
+  }
+  header {
+    padding: 15px 20px;
+  }
+  .container {
+    display: flex;
+  }
+  nav {
+    width: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  nav button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+  }
+  nav button.active {
+    background-color: #009966;
+    color: white;
+    border-color: #007a4d;
+  }
+  main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  aside {
+    width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Homepage</h1>
+    <p>Use the menu to select different Stylesheets</p>
+  </header>
+  <div class="container">
+    <nav id="menu">
+      <button class="active" data-style="stylesheet1.css">Stylesheet 1</button>
+      <button data-style="stylesheet2.css">Stylesheet 2</button>
+      <button data-style="stylesheet3.css">Stylesheet 3</button>
+      <button data-style="stylesheet4.css">Stylesheet 4</button>
+      <button data-style="no-style.css">No Stylesheet</button>
+    </nav>
+    <main>
+      <h2>Same Page Different Stylesheets</h2>
+      <p>
+        This is a demonstration of how different stylesheets can change the layout of your HTML page.
+        You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+        <br />
+        <a href="#">Stylesheet1</a>, 
+        <a href="#">Stylesheet2</a>, 
+        <a href="#">Stylesheet3</a>, 
+        <a href="#">Stylesheet4</a>.
+      </p>
+      <h3>No Styles</h3>
+      <p>
+        This page uses DIV elements to group different sections of the HTML page.
+        Click here to see how the page looks like with no stylesheet.
+      </p>
+    </main>
+    <aside>
+      <h3>Side-Bar</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </aside>
+  </div>
+
+<script>
+  const buttons = document.querySelectorAll('nav button');
+  const stylesheetLink = document.getElementById('pagestyle');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      const styleFile = button.getAttribute('data-style');
+      stylesheetLink.setAttribute('href', styleFile);
+    });
+  });
+</script>
+</body>
+</html>

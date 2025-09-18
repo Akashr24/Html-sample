@@ -1,0 +1,21 @@
+body {
+  background-color: #fff8dc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5a3e1b;
+}
+header {
+  background-color: #a0522d;
+  color: white;
+  padding: 15px 20px;
+}
+nav {
+  background-color: #f4e1c1;
+}
+nav button.active {
+  background-color: #a0522d;
+  color: white;
+}
+aside {
+  background-color: #deb887;
+  color: black;
+}
